@@ -8,7 +8,6 @@ WITH listing_income AS (
     GROUP BY l.id, l.neighbourhood
 )
 
--- Step 2: average income per listing by neighborhood
 SELECT neighbourhood, AVG(total_income) AS avg_income_per_listing, COUNT(listing_id) AS num_listings
 FROM listing_income
 GROUP BY neighbourhood
